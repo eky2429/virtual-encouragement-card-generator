@@ -14,4 +14,9 @@ function onSubmit() {
     }
 
     result.innerHTML = `Dear ${name1},<br><br>${body_text}<br><br>From, ${name2}`;
+
+    result.classList.add('flip'); // Apply flip animation
+    setTimeout(() => {
+        result.classList.remove('flip'); // Remove it after a second so you can reuse
+    }, 1000);
 }

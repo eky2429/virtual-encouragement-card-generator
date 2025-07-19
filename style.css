@@ -22,6 +22,19 @@
   background-size: cover;
 }
 
+.card-container {
+  perspective: 1000px;
+}
+
+.card {
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
 body {
   padding: 20px;
   font-family: Arial, sans-serif;
