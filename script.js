@@ -1,13 +1,9 @@
-
-
-var name1 = document.getElementById("name1").innerHTML
-var body_text = document.getElementById("his-name").innerHTML
-var name2 = document.getElementById("name2").innerHTML
-
-var result = document.getElementById("result")
-
 function onSubmit() {
-    result.innerHTML = "Dear, " + name1 + "\n"
-    result.innerHTML += body_text + "\n"
-    result.innerHTML += "From, " + name2 + "\n"
+    var name1 = document.getElementById("name1").value;
+    var body_text = document.getElementById("body").value;
+    var name2 = document.getElementById("name2").value;
+
+    var result = document.getElementById("result");
+    
+    result.innerHTML = `Dear ${name1},<br><br>${body_text}<br><br>From, ${name2}`;
 }

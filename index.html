@@ -1,4 +1,4 @@
-<DOCTYPE! HTML>
+<!DOCTYPE HTML>
 
 <html>
     <head>
@@ -15,18 +15,12 @@
         <p id = "result"></p>
 
         <!--Form for generating a card-->
-        <form>
-            Recipient:
-            <input id = "name1"  type = "text" name = /> <br/>
+        Recipient: <input id="name1" type="text" /><br/>
+        Text to include:<br/>
+        <textarea id="body"></textarea><br/>
+        Your name: <input id="name2" type="text" /><br/>
 
-            Text to include <br />
-            <textarea id = "body" > </textarea> <br/>
-
-            Your name:
-            <input id = "name2"  type = "text" name = /> <br/>
-
-            <button id = "submit onclick = "onSubmit()" >Submit</button>
-        </form>
+        <button onclick="onSubmit()">Submit</button>
 
     </body>
 </html>
