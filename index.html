@@ -1,11 +1,7 @@
 <!DOCTYPE HTML>
 
 <!--Things to add
-A button to download / copy card
 Have a color picker
-Add a verse gneerator button
-
-Add aniamtion or card flips
 -->
 
 <html>
@@ -25,6 +21,10 @@ Add aniamtion or card flips
             <div id="result" class="card"></div>
         </div> <br/>
 
+
+        <!--Warning text-->
+        <p id = "warning-text"></p>
+
         <!--Form for generating a card-->
         Recipient: <input id="name1" type="text" /><br/>
         Text to include:<br/>
@@ -39,9 +39,11 @@ Add aniamtion or card flips
             <option value="floral">Floral</option>
         </select>
 
-        <button onclick="onSubmit()">Submit</button>
+        <button onclick="onSubmit()">Submit</button> <br/>
 
         <button onclick="downloadCard()">Download Card</button>
         <button onclick="copyCard()">Copy Card</button>
+
+        <button onclick="generateVerse()">Add Verse</button> <br />
     </body>
 </html>

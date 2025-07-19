@@ -1,13 +1,14 @@
 .card {
-    background-color: #fff;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    width: 300px;
-    margin-top: 20px;
-    font-family: Arial, sans-serif;
-    box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
-    transition: background-image 0.3s ease-in-out;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 
 .card.blue {
@@ -26,11 +27,6 @@
   perspective: 1000px;
 }
 
-.card {
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
 .card.flip {
   transform: rotateY(180deg);
 }
@@ -43,4 +39,8 @@ body {
 textarea {
   width: 300px;
   height: 100px;
+}
+
+#warning-text {
+  color: red;
 }
