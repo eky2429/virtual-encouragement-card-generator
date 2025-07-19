@@ -1,0 +1,23 @@
+.card {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
+    transition: background-image 0.3s ease-in-out;
+}
+
+.card.blue {
+  background-color: #cceeff;
+}
+.card.stars {
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  background-size: cover;
+}
+.card.floral {
+  background-image: url('https://www.transparenttextures.com/patterns/floral-white.png');
+  background-size: cover;
+}

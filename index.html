@@ -1,8 +1,19 @@
 <!DOCTYPE HTML>
 
+<!--Things to add
+A background selector
+A button to download / copy card
+Have a color picker
+Add a verse gneerator button
+
+Style card with custom div and css
+Add aniamtion or card flips
+-->
+
 <html>
     <head>
         <title>Virtual Card Generator</title>
+        <link rel = "stylesheet" href = "style.css">
     </head>
     <body>
         <script src="script.js"></script>
@@ -12,7 +23,7 @@
         <p> Users can select a background, write a custom message, and download or copy an “Encouragement Time” card.</p>
 
         <!--Place to generate card-->
-        <p id = "result"></p>
+        <div id = "result" class = "card"></div><br/>
 
         <!--Form for generating a card-->
         Recipient: <input id="name1" type="text" /><br/>
@@ -20,7 +31,14 @@
         <textarea id="body"></textarea><br/>
         Your name: <input id="name2" type="text" /><br/>
 
-        <button onclick="onSubmit()">Submit</button>
+        <label for="bg-select">Choose background:</label>
+        <select id="bg-select">
+            <option value="none">None</option>
+            <option value="blue">Blue</option>
+            <option value="stars">Stars</option>
+            <option value="floral">Floral</option>
+        </select>
 
+        <button onclick="onSubmit()">Submit</button>
     </body>
 </html>
