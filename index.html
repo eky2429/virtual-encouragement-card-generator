@@ -1,13 +1,10 @@
 <!DOCTYPE HTML>
 
-<!--Things to add
-Have a color picker
--->
-
 <html>
     <head>
         <title>Virtual Card Generator</title>
         <link rel = "stylesheet" href = "style.css">
+        <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
     </head>
     <body>
         <script src="script.js"></script>
@@ -36,12 +33,14 @@ Have a color picker
             <option value="none">None</option>
             <option value="blue">Blue</option>
             <option value="stars">Stars</option>
-            <option value="floral">Floral</option>
-        </select>
+        </select> <br/>
+
+        <label for="color">Choose text color:</label>
+        <input type="color" id="color" value="#000000"> <br/>
 
         <button onclick="onSubmit()">Submit</button> <br/>
 
-        <button onclick="downloadCard()">Download Card</button>
+        <button onclick="downloadCard()">Download as Image</button>
         <button onclick="copyCard()">Copy Card</button>
 
         <button onclick="generateVerse()">Add Verse</button> <br />

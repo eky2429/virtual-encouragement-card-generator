@@ -33,27 +33,29 @@ function onSubmit() {
     isVerseAdded = false;
     const warningText = document.getElementById("warning-text");
     warningText.innerHTML = "";
+
+    const color = document.getElementById("color").value;
+    result.style.color = color;
 }
 
 function downloadCard() {
-  const element = document.createElement("a");
-  const cardContent = document.getElementById("result").innerHTML;
-  const file = new Blob([cardContent.replace(/<br>/g, "\n")], { type: 'text/plain' });
-  element.href = URL.createObjectURL(file);
-  element.download = "encouragement_card.txt";
-  document.body.appendChild(element);
-  element.click();
-  document.body.removeChild(element);
+    const result = document.getElementById("result");
+    html2canvas(result).then(canvas => {
+        const link = document.createElement("a");
+        link.download = "encouragement-card.png";
+        link.href = canvas.toDataURL();
+        link.click();
+    });
 }
 
 function copyCard() {
-  const temp = document.createElement("textarea");
-  temp.value = document.getElementById("result").innerText;
-  document.body.appendChild(temp);
-  temp.select();
-  document.execCommand("copy");
-  document.body.removeChild(temp);
-  alert("Card copied to clipboard!");
+    const text = document.getElementById("result").innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Card text copied!");
+    }).catch(err => {
+        alert("Failed to copy text.");
+        console.error(err);
+    });
 }
 
 function generateVerse() {
