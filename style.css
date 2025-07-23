@@ -18,9 +18,24 @@
   background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
   background-size: cover;
 }
-.card.floral {
-  background-image: url('https://www.transparenttextures.com/patterns/floral-white.png');
-  background-size: cover;
+.card.pink {
+  background-color: #ffd2cc;
+}
+
+.card.green {
+  background-color: #d2ffcc;
+}
+
+.card.yellow {
+  background-color: #fbffcc;
+}
+
+.card.orange {
+  background-color: #ffe9cc;
+}
+
+.card.purple {
+  background-color: #f1ccff;
 }
 
 .card-container {
